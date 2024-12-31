@@ -1,0 +1,69 @@
+<html>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rokkitt:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js">
+</script>
+<link href="style.css" rel="stylesheet" type="text/css" /><script src="script.js"></script>
+<body>
+<style>body{background-image: url("bg.jpg");background-repeat: no-repeat;background-size: 100% 100%;font-family: "Rokkitt", serif;, cursive; animation:none;transition:all .3s ease;}</style>
+
+<div id="konten"><div id="foto"><div class="image"><img id="photo" src="love.gif" width="200px" height="200px"/></div><span id="sp2"></span></div>
+
+<div id='slider'>
+  <p>Halo &nbsp;<b id="kamu"></b>‎ ‎ pacaalkuu, cintaakuu, dunia cibiL</p>
+  <p>Inget tak sekarang tanggal berapaa dan sekarang hari apaa??</p>
+  <p> Tepat ditanggal ini pada bulan lalu, aku dan kamu menjadi kita</p>
+    <p> i am very happy because at this moment i am still with the same person *kamu Jether*</p>
+  <p>Coba flashback ke awal gimana kita ketemu, dari mangkal di hoka, terus kamu ke anon aku dan lanjut ke room chat</p>
+  <p>  Btw kamu tauu lagu ini kan?? “Aku cinta kamuuuu”</p>
+  <p>Gimana bisa aku tak jatuh hati sama orang sesempurna kamu</p>
+  <p>Orang yang selalu ngertiin aku dan sabar sama sikap aku</p>
+  <p>I feel like the luckiest person because i can be your girlfriend</p>
+  <p>Aku harap ini bukan terakhir kali nya aku mengucapkan “happy mensive” karena sejujurnya aku mau lebih lama lagi bareng kamu</p>
+  <p>Pencet love ini yaa sayangku<label class='lovein' onClick="duar()">&#128158;</label></p>
+</div><div id="contTom"><a class='button whatsapp' onClick='bukaWa();'><i class='icon whatsapp'></i>Kirim</a></div>
+</div>
+<div id="bodyblur"></div>
+
+<script>  
+var a=0,finish;
+finish = " Happy mensive “Jether Vortigern” makasih untuk semuanya, aku cintaa dan sayang banget sama kamu";
+
+function play() {
+  var audio = new Audio('Starla.mp3');
+  audio.play();
+}
+            
+ function bukaWa(){window.location = "https://x.com/JangWonyounwg"}
+</script>
+ 
+<script type="text/javascript">            
+            var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
+            const swals = Swal.mixin({
+                allowOutsideClick: false,
+            });
+            async function mulai(){
+                var { value: nama } = await swals.fire({
+                    title: 'Masukin nama kamu!',
+                    input: 'text',
+                    confirmButtonText: 'next',
+                    showCancelButton: false,
+                });                           
+                if(nama){
+                	window.nama = nama;
+                    finish = finish + ", " + nama + "!";    
+                    document.getElementById("kamu").innerHTML = "" + window.nama;
+                    setTimeout(showDiv, 700);play();                      
+                } else {
+                    await swals.fire('Heh! Jangan dikosongin atuh namanya buru isi 😡');
+                    mulai();
+                }
+            }
+            mulai();
+</script>
+</body>
+</html>
